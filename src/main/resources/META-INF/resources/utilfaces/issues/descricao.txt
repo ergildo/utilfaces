@@ -1,0 +1,7 @@
+Implementado solução para trazer os registro ja existentes das datatables.
+Obs.: A solução foi sobrescrever os métodos processUpdate e ProcessDecodes para processar e atualizar
+ os componentes filhos apenas quando for uma requisição do modal.
+ Implementado lógica para fechar o modal após determidados eventos.
+ Implementado caixa de dialogo de confirmação.
+ Implementado sicrinização do valueListener como o value ao savar.
+ O sincronização nao está atualizando o selection das datatables.

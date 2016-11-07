@@ -1,0 +1,27 @@
+.util-grid-list ul {
+	display: flex;
+	list-style-type: none;
+}
+
+.util-grid-list input,.util-grid-list select {
+	width: 100%;
+}
+
+.util-grid-list ul>li {
+	margin: 2px 5px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media ( max-width :768px) {
+	.util-grid-list ul {
+		display: block;
+	}
+	.util-grid-list ul>li {
+		width: 100%;
+		margin: 2px 0;
+		display: block;
+	}
+	.util-grid-list input {
+		width: 100%;
+	}
+}

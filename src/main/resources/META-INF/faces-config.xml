@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
+	<application>
+		<system-event-listener>
+			<system-event-listener-class>br.org.ergildo.utilfaces.event.InputTextPostValidateEvent</system-event-listener-class>
+			<system-event-class>javax.faces.event.PostValidateEvent</system-event-class>
+			<source-class>javax.faces.component.html.HtmlPanelGroup</source-class>
+		</system-event-listener>
+	</application>
+	<behavior>
+		<behavior-id>br.org.ergildo.utilfaces.component.DialogHandlerBehavior</behavior-id>
+		<behavior-class>br.org.ergildo.utilfaces.component.dialoghandlerbehavior.DialogHandlerBehavior</behavior-class>
+	</behavior>
+	<component>
+		<component-type>br.org.ergildo.utilfaces.component.Image</component-type>
+		<component-class>br.org.ergildo.utilfaces.component.image.Image</component-class>
+	</component>
+	<component>
+		<component-type>br.org.ergildo.utilfaces.component.InputSearch</component-type>
+		<component-class>br.org.ergildo.utilfaces.component.inputsearch.InputSearch</component-class>
+	</component>
+	<component>
+		<component-type>br.org.ergildo.utilfaces.component.GridList</component-type>
+		<component-class>br.org.ergildo.utilfaces.component.gridlist.GridList</component-class>
+	</component>
+	<component>
+		<component-type>br.org.ergildo.utilfaces.component.DialogButton</component-type>
+		<component-class>br.org.ergildo.utilfaces.component.dialogbutton.DialogButton</component-class>
+	</component>
+	<render-kit>
+		<renderer>
+			<component-family>br.org.ergildo.utilfaces.component</component-family>
+			<renderer-type>br.org.ergildo.utilfaces.component.ImageRenderer</renderer-type>
+			<renderer-class>br.org.ergildo.utilfaces.component.image.ImageRenderer</renderer-class>
+		</renderer>
+		<renderer>
+			<component-family>br.org.ergildo.utilfaces.component</component-family>
+			<renderer-type>br.org.ergildo.utilfaces.component.InputSearchRenderer</renderer-type>
+			<renderer-class>br.org.ergildo.utilfaces.component.inputsearch.InputSearchRenderer</renderer-class>
+		</renderer>
+		<renderer>
+			<component-family>br.org.ergildo.utilfaces.component</component-family>
+			<renderer-type>br.org.ergildo.utilfaces.component.GridListRenderer</renderer-type>
+			<renderer-class>br.org.ergildo.utilfaces.component.gridlist.GridListRenderer</renderer-class>
+		</renderer>
+		<renderer>
+			<component-family>br.org.ergildo.utilfaces.component</component-family>
+			<renderer-type>br.org.ergildo.utilfaces.component.DialogButtonRenderer</renderer-type>
+			<renderer-class>
+				br.org.ergildo.utilfaces.component.dialogbutton.DialogButtonRenderer
+			</renderer-class>
+		</renderer>
+		<client-behavior-renderer>
+			<client-behavior-renderer-type>br.org.ergildo.utilfaces.component.DialogHandlerBehaviorRenderer</client-behavior-renderer-type>
+			<client-behavior-renderer-class>br.org.ergildo.utilfaces.component.dialoghandlerbehavior.DialogHandlerBehaviorRenderer</client-behavior-renderer-class>
+		</client-behavior-renderer>
+	</render-kit>
+</faces-config>

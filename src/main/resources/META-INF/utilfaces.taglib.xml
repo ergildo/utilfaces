@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facelet-taglib xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facelettaglibrary_2_0.xsd"
+	version="2.0">
+
+	<namespace>http://ergildo.org.br/utilfaces/ui</namespace>
+
+	<tag>
+		<description><![CDATA[dialogHandler]]></description>
+		<tag-name>dialogHandler</tag-name>
+		<behavior>
+			<behavior-id>br.org.ergildo.utilfaces.component.DialogHandlerBehavior</behavior-id>
+			<handler-class>br.org.ergildo.utilfaces.component.dialoghandlerbehavior.DialogHandlerBehaviorHandler</handler-class>
+		</behavior>
+		<attribute>
+			<description><![CDATA[Define o método que será executado.]]></description>
+			<name>listener</name>
+			<required>true</required>
+			<type>javax.el.MethodExpression</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define o dialog que será exibido. Obs.: A propriedade do dialog a ser informada é o "id" e não a "widgetVar"]]></description>
+			<name>for</name>
+			<required>true</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define o evento.]]></description>
+			<name>event</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define a "PhaseId" da ação do evento. Se verdadeiro, "INVOKE_APPLICATION", do contrário "APPLY_REQUEST_VALUES". ]]></description>
+			<name>immediate</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+	</tag>
+	<tag>
+		<description><![CDATA[Renderiza imagem apartir de array de bytes.]]></description>
+		<tag-name>image</tag-name>
+		<component>
+			<component-type>br.org.ergildo.utilfaces.component.Image</component-type>
+			<renderer-type>br.org.ergildo.utilfaces.component.image.ImageRenderer</renderer-type>
+		</component>
+		<attribute>
+			<description><![CDATA[Define a height.]]></description>
+			<name>height</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define o width.]]></description>
+			<name>width</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define o valor do input.]]></description>
+			<name>value</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+
+	<tag>
+		<description><![CDATA[Renderiza input de pesquisa.]]></description>
+		<tag-name>inputsearch</tag-name>
+		<component>
+			<component-type>br.org.ergildo.utilfaces.component.InputSearch</component-type>
+			<renderer-type>br.org.ergildo.utilfaces.component.InputSearchRenderer</renderer-type>
+			<handler-class>br.org.ergildo.utilfaces.component.inputsearch.InputSearchHandler</handler-class>
+		</component>
+		<attribute>
+			<description><![CDATA[Define o valor do campo .]]></description>
+			<name>searchListener</name>
+			<required>true</required>
+			<method-signature>java.lang.Object action(SearchEvent)</method-signature>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define o valor do campo .]]></description>
+			<name>value</name>
+			<required>true</required>
+			<type>java.lang.Object</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define a variável.]]></description>
+			<name>var</name>
+			<required>true</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define a chave/id de pesquisa .]]></description>
+			<name>key</name>
+			<required>true</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define define o text da pesquisa.]]></description>
+			<name>text</name>
+			<required>true</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define o dialog.]]></description>
+			<name>dialog</name>
+			<required>true</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define se o campo é requerido.]]></description>
+			<name>required</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define a mensagem de campo requerido.]]></description>
+			<name>requiredMessage</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+
+	<tag>
+		<description><![CDATA[Botões para dialog.]]></description>
+		<tag-name>dialogButton</tag-name>
+		<component>
+			<component-type>br.org.ergildo.utilfaces.component.DialogButton</component-type>
+			<renderer-type>br.org.ergildo.utilfaces.component.DialogButtonRenderer</renderer-type>
+		</component>
+		<attribute>
+			<description><![CDATA[Define o id do componente.]]></description>
+			<name>id</name>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define o nome do client side widget do componente.]]></description>
+			<name>widget</name>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define a label do botão]]></description>
+			<name>value</name>
+			<required>true</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define o método a ser executado quando botão for clicado.]]></description>
+			<name>action</name>
+			<required>true</required>
+			<method-signature>java.lang.Object action()</method-signature>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Deifine se componente deve ser renderizado. O valor padrao é true]]></description>
+			<name>rendered</name>
+			<type>java.lang.Boolean</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Deifine se conteudo do dialog deve ser validado. O valor padrao é true]]></description>
+			<name>validateContent</name>
+			<type>java.lang.Boolean</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Deifine se dialog será fechado ao completar a ação . O valor padrao é false]]></description>
+			<name>closeOnComplete</name>
+			<type>java.lang.Boolean</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define o(s) componente a ser atualizado ao fechar o dialog. Por padrão, o compoente pai(@parent) e todos componente dentro dialog são atualizado.]]></description>
+			<name>update</name>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define o ícone do botão.]]></description>
+			<name>icon</name>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Define a mensagem de confirmação do botão.]]></description>
+			<name>confirmMessage</name>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+	<tag>
+		<description><![CDATA[Renderiza um grid list.]]></description>
+		<tag-name>gridList</tag-name>
+		<component>
+			<component-type>br.org.ergildo.utilfaces.component.GridList</component-type>
+			<renderer-type>br.org.ergildo.utilfaces.component.GridListRenderer</renderer-type>
+		</component>
+	</tag>
+</facelet-taglib>
